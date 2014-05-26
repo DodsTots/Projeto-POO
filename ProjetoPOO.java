@@ -52,7 +52,7 @@ public class ProjetoPOO
                     }
                     
                     //DEFINIÇÃO DO SEXO
-                    if ( menu == 1 )
+                    else if ( menu == 1 )
                     {
                         while ( true )
                         {
@@ -71,7 +71,7 @@ public class ProjetoPOO
                     }
                     
                     //DEFINIÇÃO DA VANTAGEM
-                    if ( menu == 2 )
+                    else if ( menu == 2 )
                     {
                         while ( true )
                         {
@@ -108,7 +108,7 @@ public class ProjetoPOO
                     }
                     
                     //DEFINIÇÃO DO HISTÓRICO
-                    if ( menu == 3 )
+                    else if ( menu == 3 )
                     {
                         while ( true )
                         {
@@ -131,7 +131,7 @@ public class ProjetoPOO
                                 break;
                             }
                             
-                            else if ( 1 < decisao || decisao > 4 )
+                            else if ( 1 > decisao || decisao > 4 )
                             {
                                 JOptionPane.showMessageDialog( null, "Tente novamente" );
                                 break;
@@ -143,7 +143,7 @@ public class ProjetoPOO
                         }
                     }
                     
-                    if ( menu == 4)
+                    else if ( menu == 4)
                     {
                         break;
                     }
@@ -156,7 +156,7 @@ public class ProjetoPOO
                     //PARTES DA HISTÓRIA
                     if ( personagem.getSituacaoAtual() == 0 )
                     {
-                        personagem.setNome(JOptionPane.showInputDialog( null, historiaPrincipal.getHistoriaPrincipal( personagem.getPartHistoria() ) ) );
+                        JOptionPane.showInputDialog( null, historiaPrincipal.getHistoriaPrincipal( personagem.getPartHistoria() ) );
                         personagem.aumentaPartHistoria();
                         
                         personagem.setSituacaoAtual(1);
